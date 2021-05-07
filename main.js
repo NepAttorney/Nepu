@@ -10,7 +10,7 @@ const client = new Discord.Client({ partials: [ "MESSAGE", "REACTION", "CHANNEL"
 
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
-client.categories - fs.readdirSync('./commnads/');
+client.categories - fs.readdirSync('./commands/');
 
 ['command_handler', 'event_handler'].forEach(handler => {
     require(`./handlers/${handler}`)(client, Discord);
