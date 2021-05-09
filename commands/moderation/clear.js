@@ -1,10 +1,27 @@
-//Command: nep!clear
-module.exports = {
-    name: 'clear',
-    permissions: ["ADMINISTRATOR"],
-    description: "Clear the specified amount of messages in a channel.",
-    aliases: [],
-    async execute(client, message, args){
+const Commando = require('discord.js-commando');
+const { Message } = require('discord.js');
+
+module.exports = class ClearCommand extends Commando.Command {
+    constructor(client) {
+        super(client, {
+            name: 'clear',
+            group: 'moderation',
+            memberName: 'clear',
+            description: "Clear the specified amount of messages in a channel.",
+            clientPermissions: [
+                "ADMINISTRATOR"
+            ],
+            userPermissions: [
+                "ADMINISTRATOR"
+            ],
+        })
+    }
+
+    /**
+     * @param {Message} message 
+     * @param {String[]} args 
+     */
+    async run(message, args) {
 
         if(!args[0]) return message.reply("Please enter the amount of messages you want to clear!");
         if(isNaN(args[0])) return message.reply("Please enter a real number!");

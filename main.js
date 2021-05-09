@@ -2,24 +2,32 @@ require("module-alias/register");
 
 const fs = require("fs");
 
+const Commando = require("discord.js-commando");
 const Discord = require("discord.js");
+const path = require("path");
 
 require("dotenv").config();
 
-const client = new Discord.Client({
-  partials: [ "MESSAGE", "REACTION", "CHANNEL" ],
+const client = new Commando.CommandoClient({
+    owner: "428288065115783172",
+    commandPrefix: process.env.PREFIX,
+    partials: ["MESSAGE", "REACTION", "CHANNEL"],
 });
 
-client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
-client.categories - fs.readdirSync("./commands/");
 
-["command_handler", "event_handler"].forEach((handler) => {
-  require(`./handlers/${handler}`)(client, Discord);
-});
+require(`./handlers/event_handler`)(client, Discord);
 
 client.once("ready", () => {
-  client.user.setActivity("Nep nep nep nep", { type: "CUSTOM_STATUS" });
+    client.user.setActivity("Nep nep nep nep", { type: "CUSTOM_STATUS" });
+
+    client.registry
+        .registerGroups([
+            ["commands", "Nep commands"],
+            ["moderation", "Moderation Commands"]
+        ])
+        .registerDefaults()
+        .registerCommandsIn(path.join(__dirname, "commands"));
 });
 
 client.login(process.env.DISCORD_TOKEN);

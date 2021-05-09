@@ -11,6 +11,7 @@
   "dependencies": {
     "ascii-table": "^0.0.9",
     "discord.js": "^12.5.3",
+    "discord.js-commando": "github:discordjs/commando",
     "dotenv": "^9.0.0",
     "fs": "^0.0.1-security",
     "module-alias": "^2.2.2",
