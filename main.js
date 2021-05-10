@@ -30,7 +30,8 @@ client.once("ready", () => {
         ])
         .registerDefaultGroups()
         .registerDefaultCommands({
-            prefix: false
+            prefix: false,
+            eval: false
         })
         .registerCommandsIn(path.join(__dirname, "commands"));
 });
@@ -50,8 +51,12 @@ client.on('message', (message) => {
             "Nepu nepu nepu!",
             "Sounds cool!",
             "Coolio.",
-            "Who's next on the nep list?"
-        ]
+            "Who's next on the nep list?",
+            "Is it pudding time?",
+            "Pudding! Pudding! Pudding!",
+            "Blepu~",
+            "*Happy Nep noises*"
+        ];
 
         const pingedMessage = pingedMessages[Math.floor(Math.random() * pingedMessages.length)];
 
