@@ -26,7 +26,7 @@ client.once("ready", () => {
         .registerGroups([
             ["commands", "Nep commands"],
             ["moderation", "Moderation Commands"],
-            ["utilities", "Utilities Commands"]
+            ["utilities", "Utility Commands"]
         ])
         .registerDefaultGroups()
         .registerDefaultCommands({
