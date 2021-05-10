@@ -26,7 +26,8 @@ client.once("ready", () => {
         .registerGroups([
             ["commands", "Nep commands"],
             ["moderation", "Moderation Commands"],
-            ["utilities", "Utility Commands"]
+            ["utilities", "Utility Commands"],
+            ["canvacord", "Image Manipulation"]
         ])
         .registerDefaultGroups()
         .registerDefaultCommands({
@@ -83,8 +84,8 @@ client.on('guildCreate', (guild) => {
             .setFooter(`Currently in ${client.guilds.cache.size} servers!`)
             .setTimestamp()
             .setColor('#ff97e0')
-    )
-})
+    );
+});
 
 client.on('guildDelete', (guild) => {
     client.channels.cache.get(logChannel).send(
@@ -104,7 +105,7 @@ client.on('guildDelete', (guild) => {
             .setFooter(`Currently in ${client.guilds.cache.size} servers!`)
             .setTimestamp()
             .setColor('RED')
-    )
-})
+    );
+});
 
 client.login(process.env.DISCORD_TOKEN);
