@@ -9,7 +9,8 @@ module.exports = class UwuCommand extends Commando.Command {
             name: "uwu",
             group: "commands",
             memberName: "uwu",
-            description: "Turn your message into an uwudable message!"
+            description: "Turn your message into an uwudable message!",
+            argsType: 'multiple'
         })
     }
 
@@ -18,15 +19,17 @@ module.exports = class UwuCommand extends Commando.Command {
      * @param {String[]} args 
      */
     async run(message, args) {
+        let messageArgs = args.join(" ");
+
         const randomChance = Math.floor(Math.random() * 100) + 1
         if(randomChance >= 77){
-            const owomessage = owoify(args, 'uvu');
+            const owomessage = owoify(messageArgs, 'uvu');
             message.channel.send(owomessage)
         } else if(randomChance >= 33){
-            const owomessage = owoify(args, 'uwu');
+            const owomessage = owoify(messageArgs, 'uwu');
             message.channel.send(owomessage)
         } else {
-            const owomessage = owoify(args);
+            const owomessage = owoify(messageArgs);
             message.channel.send(owomessage)
         }
     }

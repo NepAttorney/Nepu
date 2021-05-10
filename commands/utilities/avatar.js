@@ -4,7 +4,7 @@ module.exports = class AvatarCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'avatar',
-            group: 'commands',
+            group: 'utilities',
             memberName: 'avatar',
             description: "Get your avatar or someone elses!",
             aliases: ["pfp"]

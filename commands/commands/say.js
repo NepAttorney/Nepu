@@ -6,7 +6,8 @@ module.exports = class SayCommand extends Commando.Command {
             name: "say",
             group: "commands",
             memberName: "say",
-            description: "Make me say something!"
+            description: "Make me say something!",
+            argsType: 'multiple'
         })
     }
 
@@ -15,10 +16,8 @@ module.exports = class SayCommand extends Commando.Command {
      * @param {String[]} args 
      */
     async run(message, args) {
-        message.channel.send(args).then((msg) =>{
-            message.delete();
-        }).catch((err) =>{
-            throw err
-        });
+        let messageArgs = args.join(" ")
+
+        message.channel.send(messageArgs)
     }
 }
