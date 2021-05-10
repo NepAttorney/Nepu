@@ -35,6 +35,7 @@ module.exports = class InfoCommand extends Commando.Command {
                 format: "png",
                 size: 4096
             }))
+            .setDescription("Hi there, I'm Nepu! The ultimate protagonist!")
             .addFields(
                 {name: "Name", value: this.client.user.username},
                 {name: "Created By", value: "HamoodyTheWolf#7257"},
