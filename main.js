@@ -26,13 +26,14 @@ client.once("ready", () => {
         .registerGroups([
             ["commands", "Nep commands"],
             ["moderation", "Moderation Commands"],
-            ["utilities", "Utility Commands"],
+            ["util", "Utility Commands"],
             ["canvacord", "Image Manipulation"]
         ])
         .registerDefaultGroups()
         .registerDefaultCommands({
             prefix: false,
-            eval: false
+            eval: false,
+            commandState: false
         })
         .registerCommandsIn(path.join(__dirname, "commands"));
 });

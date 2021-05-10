@@ -5,7 +5,7 @@ module.exports = class ServerinfoCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'serverinfo',
-            group: 'utilities',
+            group: 'util',
             memberName: 'serverinfo',
             description: "Get some information about the server!",
             argsType: 'multiple'

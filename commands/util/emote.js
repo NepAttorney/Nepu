@@ -5,7 +5,7 @@ module.exports = class EmoteCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: "emote",
-            group: 'utilities',
+            group: 'util',
             memberName: 'emote',
             description: "Get the URL of an emote.",
             argsType: 'multiple'
