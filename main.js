@@ -2,6 +2,9 @@ require("module-alias/register");
 
 const fs = require("fs");
 
+const { MongoClient } = require('mongodb');
+const { MongoDBProvider } = require('commando-provider-mongo');
+
 const Commando = require("discord.js-commando");
 const Discord = require("discord.js");
 const path = require("path");
@@ -13,6 +16,19 @@ const client = new Commando.CommandoClient({
     commandPrefix: process.env.PREFIX,
     partials: ["MESSAGE", "REACTION", "CHANNEL"],
 });
+
+client.setProvider(
+    MongoClient.connect(process.env.MONGODB_SRV, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+        .then((client) => {
+            console.log("Connected to Le Deb!")
+            return new MongoDBProvider(client, "BotDB")
+        }).catch((err) => {
+            console.error(err)
+        })
+);
 
 client.events = new Discord.Collection();
 
@@ -31,9 +47,7 @@ client.once("ready", () => {
         ])
         .registerDefaultGroups()
         .registerDefaultCommands({
-            prefix: false,
             eval: false,
-            commandState: false
         })
         .registerCommandsIn(path.join(__dirname, "commands"));
 });
