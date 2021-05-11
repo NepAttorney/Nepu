@@ -2,6 +2,7 @@ require("module-alias/register");
 
 const fs = require("fs");
 
+const mongoDB = require('./features/mongoose');
 const { MongoClient } = require('mongodb');
 const { MongoDBProvider } = require('commando-provider-mongo');
 
@@ -34,8 +35,10 @@ client.events = new Discord.Collection();
 
 require(`./handlers/event_handler`)(client, Discord);
 
-client.once("ready", () => {
+client.once("ready", async () => {
     client.user.setActivity("Nep nep nep nep", { type: "CUSTOM_STATUS" });
+
+    await mongoDB();
 
     client.registry
         .registerDefaultTypes()
