@@ -26,7 +26,8 @@ client.setProvider(
         .then((client) => {
             console.log("Connected to Le Deb!")
             return new MongoDBProvider(client, "BotDB")
-        }).catch((err) => {
+        })
+        .catch((err) => {
             console.error(err)
         })
 );
