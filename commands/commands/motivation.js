@@ -19,7 +19,8 @@ module.exports = class MotivationCommand extends Commando.Command {
         const motivationMessages = [
             "It's dangerous to go alone. Take Nep!",
             "Hang in there, player!",
-            "Cheer up! Here, have a pat-pat."
+            "Cheer up! Here, have a pat-pat.",
+            "Let's move forward, player!"
         ];
 
         const motivationMessage = motivationMessages[Math.floor(Math.random() * motivationMessages.length)];
