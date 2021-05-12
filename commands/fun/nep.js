@@ -5,7 +5,7 @@ module.exports = class NepCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'nep',
-            group: 'commands',
+            group: 'fun',
             memberName: 'nep',
             description: "Nepu nepu nep!",
             aliases: ["nepu"],

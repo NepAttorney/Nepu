@@ -5,7 +5,7 @@ module.exports = class CuddleCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: "cuddle",
-            group: 'commands',
+            group: 'fun',
             memberName: 'cuddle',
             description: "Cuddle someone... or me!",
             argsType: "multiple"

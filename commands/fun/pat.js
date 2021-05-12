@@ -5,7 +5,7 @@ module.exports = class PatCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'pat',
-            group: 'commands',
+            group: 'fun',
             memberName: 'pat',
             description: "Pat someone... or me!",
             aliases: ["pet"]

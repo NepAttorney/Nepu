@@ -5,7 +5,7 @@ module.exports = class HugCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'hug',
-            group: 'commands',
+            group: 'fun',
             memberName: 'hug',
             description: "Hug someone... or me!",
             aliases: ["huggu"],

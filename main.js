@@ -46,7 +46,8 @@ client.once("ready", async () => {
     client.registry
         .registerDefaultTypes()
         .registerGroups([
-            ["commands", "Nep commands"],
+            ["commands", "Nep Commands"],
+            ["fun", "Fun Commands"],
             ["moderation", "Moderation Commands"],
             ["util", "Utility Commands"],
             ["canvacord", "Image Manipulation"]

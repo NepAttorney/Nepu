@@ -5,7 +5,7 @@ module.exports = class PlaygameCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'playgame',
-            group: 'commands',
+            group: 'fun',
             memberName: 'playgame',
             description: "Play a game with a user and see who wins!",
             aliases: ["play"],
