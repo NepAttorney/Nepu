@@ -19,7 +19,10 @@ module.exports = class InvertCommand extends Commando.Command {
     async run(message) {
         const user = message.mentions.users.first() || message.author;
 
-        const avatar = user.displayAvatarURL({ format: "png" });
+        const avatar = user.displayAvatarURL({
+            format: "png",
+            size: 4096
+        });
 
         const image = await Canvas.invert(avatar);
 

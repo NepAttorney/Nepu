@@ -26,7 +26,10 @@ module.exports = class JailCommand extends Commando.Command {
             isTrue = false
         }
 
-        const avatar = user.displayAvatarURL({ format: "png" });
+        const avatar = user.displayAvatarURL({
+            format: "png",
+            size: 4096
+        });
 
         const image = await Canvas.jail(avatar, isTrue);
 

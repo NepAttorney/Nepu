@@ -21,8 +21,14 @@ module.exports = class SlapCommand extends Commando.Command {
         if (!target) return message.channel.send("Mention a user to slap!");
         const user = message.author
 
-        const targetAvatar = target.displayAvatarURL({ format: "png" });
-        const userAvatar = user.displayAvatarURL({ format: "png" });
+        const targetAvatar = target.displayAvatarURL({
+            format: "png",
+            size: 4096
+        });
+        const userAvatar = user.displayAvatarURL({
+            format: "png",
+            size: 4096
+        });
 
         const image = await Canvas.slap(userAvatar, targetAvatar);
 

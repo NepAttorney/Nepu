@@ -8,7 +8,7 @@ module.exports = class MotivationCommand extends Commando.Command {
             group: "commands",
             memberName: 'motivation',
             description: "Let me motivate you!",
-            aliases: ["motive"],
+            aliases: ["motivate"],
         })
     }
 
