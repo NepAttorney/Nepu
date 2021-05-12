@@ -49,8 +49,7 @@ client.once("ready", async () => {
             ["commands", "Nep commands"],
             ["moderation", "Moderation Commands"],
             ["util", "Utility Commands"],
-            ["canvacord", "Image Manipulation"],
-            ["config", "Config Commands"]
+            ["canvacord", "Image Manipulation"]
         ])
         .registerDefaultGroups()
         .registerDefaultCommands({

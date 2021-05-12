@@ -7,7 +7,7 @@ module.exports = class SetSuggestionsChannelCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'setsuggestionschannel',
-            group: 'config',
+            group: 'util',
             memberName: 'setsuggestionschannel',
             description: "Set the suggestions channel!",
             throttling: {
