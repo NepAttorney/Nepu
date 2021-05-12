@@ -29,7 +29,10 @@ module.exports = (client) => {
     client.on('message', (message) => {
         const { guild, channel, content, member } = message
 
-        const cachedChannelID = suggestionCache[guild.id]
+        let cachedChannelID
+        if (guild) {
+            cachedChannelID = suggestionCache[guild.id]
+        }
         
         if (cachedChannelID && cachedChannelID === channel.id && !member.user.bot) {
             message.delete()
