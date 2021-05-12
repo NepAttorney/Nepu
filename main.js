@@ -2,6 +2,7 @@ require("module-alias/register");
 
 const fs = require("fs");
 
+const loadFeatures = require('./features/loadFeatures');
 const mongoDB = require('./features/mongoose');
 const { MongoClient } = require('mongodb');
 const { MongoDBProvider } = require('commando-provider-mongo');
@@ -39,7 +40,8 @@ require(`./handlers/event_handler`)(client, Discord);
 client.once("ready", async () => {
     client.user.setActivity("Nep nep nep nep", { type: "CUSTOM_STATUS" });
 
-    await mongoDB();
+    loadFeatures(client)
+    await mongoDB()
 
     client.registry
         .registerDefaultTypes()
@@ -47,7 +49,8 @@ client.once("ready", async () => {
             ["commands", "Nep commands"],
             ["moderation", "Moderation Commands"],
             ["util", "Utility Commands"],
-            ["canvacord", "Image Manipulation"]
+            ["canvacord", "Image Manipulation"],
+            ["config", "Config Commands"]
         ])
         .registerDefaultGroups()
         .registerDefaultCommands({
