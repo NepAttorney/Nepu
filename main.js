@@ -60,7 +60,7 @@ client.once("ready", async () => {
 });
 
 
-const logChannel = '840335142644219914'
+const logChannel = '842150738439307305'
 
 client.on('guildCreate', (guild) => {
     client.channels.cache.get(logChannel).send(
