@@ -9,6 +9,8 @@ module.exports = async () => {
         useUnifiedTopology: true,
         useFindAndModify: false,
         useCreateIndex: true
+    }).catch((err) => {
+        throw err;
     })
     return mongoose
 }
