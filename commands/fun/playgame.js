@@ -29,7 +29,8 @@ module.exports = class PlaygameCommand extends Commando.Command {
             "Nepperlands",
             "Nepcraft",
             "Nep of Duty",
-            "Apex Neps"
+            "Apex Neps",
+            "Nep 4 Dead 2"
         ];
         const game = games[Math.floor(Math.random() * games.length)];
 
