@@ -36,7 +36,7 @@ client.events = new Discord.Collection();
 require(`./handlers/event_handler`)(client, Discord);
 
 client.once("ready", async () => {
-    client.user.setActivity("Nep nep nep nep", { type: "CUSTOM_STATUS" });
+    client.user.setActivity("with Nep-Neps", { type: "PLAYING" });
 
     loadFeatures(client)
     await mongoDB()
