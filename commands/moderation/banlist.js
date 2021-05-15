@@ -22,7 +22,7 @@ module.exports = class BanlistCommand extends Commando.Command {
      */
     async run(message) {
         const banList = await message.guild.fetchBans()
-        const bannedMembers = (await banList).map((member) => member.user.tag).join("\n");
+        const bannedMembers = banList.map((member) => member.user.tag).join("\n");
 
         message.channel.send(
             new MessageEmbed()
