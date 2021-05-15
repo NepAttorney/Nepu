@@ -15,12 +15,8 @@
     "discord.js-commando": "github:discordjs/commando",
     "dotenv": "^9.0.0",
     "fs": "^0.0.1-security",
-    "module-alias": "^2.2.2",
     "mongoose": "^5.12.8",
     "owoify-js": "^1.0.7",
     "partials": "^0.1.0"
-  },
-  "_moduleAliases": {
-    "@root": "."
   }
 }

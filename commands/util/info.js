@@ -1,6 +1,6 @@
 const Commando = require('discord.js-commando');
 const { Message, MessageEmbed } = require('discord.js');
-const { version } = require('@root/package');
+const { version } = require('../../package');
 
 module.exports = class InfoCommand extends Commando.Command {
     constructor(client) {
