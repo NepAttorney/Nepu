@@ -3,6 +3,10 @@ const commonTags = require('common-tags');
 
 const changeLog = [
     {
+        version: "1.1.1",
+        changes: commonTags.stripIndents`Added the tempmute commands.`
+    },
+    {
         version: "1.1.0",
         changes: commonTags.stripIndents`Fixed some bugs
         Fun group added.
