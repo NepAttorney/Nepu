@@ -19,6 +19,7 @@ module.exports = class BanCommand extends Commando.Command {
                 usages: 2,
                 duration: 5,
             },
+            argsType: "multiple"
         })
     }
 

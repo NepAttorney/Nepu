@@ -18,6 +18,7 @@ module.exports = class TempMuteCommand extends Commando.Command {
                 usages: 2,
                 duration: 10
             },
+            argsType: "multiple"
         })
     }
 
