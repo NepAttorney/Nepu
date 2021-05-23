@@ -44,10 +44,10 @@ module.exports = class BanCommand extends Commando.Command {
                 .setTitle("User has been banned!")
                 .setColor("#ff0000")
                 .setThumbnail(member.avatarURL({ size: 4096, dynamic: true }))
-                .setDescription(`${member.tag} has been banned from the factory!\nReason: ${reason}`)
+                .setDescription(`${member.tag} has been banned from the server!\nReason: ${reason}`)
             );
         } else {
-            message.channel.send("You can't ban the void.");
+            message.channel.send("No users mentioned!");
         }
     }
 }
