@@ -8,7 +8,7 @@ module.exports = class PatCommand extends Commando.Command {
             group: 'fun',
             memberName: 'pat',
             description: "Pat someone... or me!",
-            aliases: ["pet"]
+            aliases: ["pet", "headpat"]
         })
     }
 

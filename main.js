@@ -53,6 +53,7 @@ client.once("ready", async () => {
         .registerDefaultGroups()
         .registerDefaultCommands({
             eval: false,
+            unknownCommand: false
         })
         .registerCommandsIn(path.join(__dirname, "commands"));
 });
