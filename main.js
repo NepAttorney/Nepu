@@ -2,8 +2,6 @@ const fs = require("fs");
 
 const keepAlive = require('./server')
 
-const loadFeatures = require('./features/loadFeatures');
-const mongoDB = require('./features/mongoose');
 const { MongoClient } = require('mongodb');
 const { MongoDBProvider } = require('commando-provider-mongo');
 
@@ -39,9 +37,6 @@ require(`./handlers/event_handler`)(client, Discord);
 
 client.once("ready", async () => {
     client.user.setActivity("with Nep-Neps", { type: "PLAYING" });
-
-    loadFeatures(client)
-    await mongoDB()
 
     client.registry
         .registerDefaultTypes()
