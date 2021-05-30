@@ -1,5 +1,7 @@
 const fs = require("fs");
 
+const keepAlive = require('./server')
+
 const loadFeatures = require('./features/loadFeatures');
 const mongoDB = require('./features/mongoose');
 const { MongoClient } = require('mongodb');
@@ -103,4 +105,5 @@ client.on('guildDelete', (guild) => {
     );
 });
 
+keepAlive()
 client.login(process.env.DISCORD_TOKEN);
