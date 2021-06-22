@@ -1,6 +1,6 @@
 {
   "name": "nepu",
-  "version": "1.1.1",
+  "version": "1.1.6",
   "description": "Le nep",
   "main": "main.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "canvacord": "^5.2.0",
     "commando-provider-mongo": "^2.1.0",
     "common-tags": "^1.8.0",
+    "discord-buttons": "^3.2.1",
     "discord.js": "^12.5.3",
     "discord.js-commando": "github:discordjs/commando",
     "dotenv": "^9.0.0",
