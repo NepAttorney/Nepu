@@ -7,7 +7,7 @@ module.exports = class EightBallCommand extends Commando.Command {
             name: '8ball',
             group: 'commands',
             memberName: '8ball',
-            description: 'An 8ball command where the user asks something and I will reply.',
+            description: 'An 8ball command where the user asks something and I will reply!',
             argsType: "multiple"
         })
     }
