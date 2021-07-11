@@ -19,7 +19,8 @@ module.exports = async (Discord, client, message) => {
             "Blepu~",
             "*Happy Nep noises*",
             "Nepupu!",
-            "Get nepped!"
+            "Get nepped!",
+            "How about a huggu?"
         ];
 
         const pingedMessage = pingedMessages[Math.floor(Math.random() * pingedMessages.length)];
