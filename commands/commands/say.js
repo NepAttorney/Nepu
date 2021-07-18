@@ -18,6 +18,7 @@ module.exports = class SayCommand extends Commando.Command {
     async run(message, args) {
         let messageArgs = args.join(" ")
 
-        message.channel.send(messageArgs)
+        message.channel.send(messageArgs);
+        message.delete();
     }
 }
