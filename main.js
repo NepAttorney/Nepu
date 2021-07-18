@@ -93,7 +93,7 @@ client.on('guildDelete', (guild) => {
                 {name: "Server Name", value: `${guild.name}`},
                 {name: "Server ID", value: `${guild.id}`},
                 {name: "Owner Name", value: `${guild.owner}`},
-                {name: "Owner ID", value: `${guild.owner.id}`},
+                {name: "Owner ID", value: `${guild.ownerID}`},
                 {name: "Member Count", value: `${guild.memberCount}`}
             )
             .setFooter(`Currently in ${client.guilds.cache.size} servers!`)
