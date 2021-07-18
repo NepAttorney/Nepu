@@ -29,7 +29,7 @@ module.exports = class BanCommand extends Commando.Command {
     async run(message, args) {
         const member = message.mentions.users.first();
         const reason = args[1] || "None."
-        if(member?.id === this.client.user.id){
+        if(member && member.id === this.client.user.id){
             return message.channel.send("Nepuuuu! You can't ban me!")
         }
 

@@ -26,7 +26,7 @@ module.exports = class KickCommand extends Commando.Command {
      */
     async run(message) {
         const member = message.mentions.users.first();
-        if(member?.id === this.client.user.id) {
+        if(member && member.id === this.client.user.id) {
             return message.channel.send("Nepuuuu! You can't kick me!")
         }
         if(member){
