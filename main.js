@@ -81,26 +81,5 @@ client.on('guildCreate', (guild) => {
     );
 });
 
-client.on('guildDelete', (guild) => {
-    client.channels.cache.get(logChannel).send(
-        new Discord.MessageEmbed()
-            .setTitle(`I got removed from a server!`)
-            .setThumbnail(guild.iconURL({
-                size: 4096,
-                dynamic: true
-            }))
-            .addFields(
-                {name: "Server Name", value: `${guild.name}`},
-                {name: "Server ID", value: `${guild.id}`},
-                {name: "Owner Name", value: `${guild.owner}`},
-                {name: "Owner ID", value: `${guild.ownerID}`},
-                {name: "Member Count", value: `${guild.memberCount}`}
-            )
-            .setFooter(`Currently in ${client.guilds.cache.size} servers!`)
-            .setTimestamp()
-            .setColor('RED')
-    );
-});
-
 keepAlive()
 client.login(process.env.DISCORD_TOKEN);
