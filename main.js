@@ -17,8 +17,6 @@ const client = new Commando.CommandoClient({
     partials: ["MESSAGE", "REACTION", "CHANNEL"],
 });
 
-require('discord-buttons')(client);
-
 client.setProvider(
     MongoClient.connect(process.env.MONGODB_SRV, {
         useNewUrlParser: true,

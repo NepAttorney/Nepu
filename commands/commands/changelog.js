@@ -3,6 +3,10 @@ const commonTags = require('common-tags');
 
 const changeLog = [
     {
+        version: "1.2.1",
+        changes: commonTags.stripIndents`Removed the \`invite\` command because of a bug.`
+    },
+    {
         version: "1.1.6",
         changes: commonTags.stripIndents`Added the invite command.`
     },
