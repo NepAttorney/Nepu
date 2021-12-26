@@ -17,17 +17,22 @@ module.exports = class RateCommand extends Commando.Command {
      * @param {String[]} args 
      */
     async run(message, args) {
-        if (!args[0]) {
+        if (!args) {
             var rate = Math.floor(Math.random() * 10) + 1;
 
             return message.channel.send(`I rate you ${rate}/10!`);
         }
 
-        if (args[0]){
+        if (args){
             var rate = Math.floor(Math.random() * 10) + 1;
 
             const target = message.mentions.users.first();
-            let rateTarget = message.guild.members.cache.get(target.id);
+            let rateTarget
+            if (target) {
+                rateTarget = message.guild.members.cache.get(target.id);
+            } else {
+                rateTarget = args.join(" ")
+            }
 
             message.channel.send(`I rate ${rateTarget} ${rate}/10!`)
         }
